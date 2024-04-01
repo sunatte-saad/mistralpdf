@@ -5,6 +5,9 @@ from llama_index.core import SimpleDirectoryReader, VectorStoreIndex
 import gradio as gr
 from gradio_pdf import PDF
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 api_key = os.getenv('MISTRAL_API_KEY')
 llm = MistralAI(api_key=api_key, model="mistral-large-latest")
